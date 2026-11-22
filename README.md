@@ -1,51 +1,32 @@
-# Sileo
-[![Build](https://github.com/Sileo/Sileo/actions/workflows/main.yml/badge.svg)](https://github.com/Sileo/Sileo/actions/workflows/main.yml)
+# Sileo demo
 
-A modern APT package manager frontend
+A userland demo of the Sileo package manager UI, running on stock iOS — no jailbreak, no exploits, no privileges.
 
-# Info
+This is a demo, not the full Sileo app. It shows the real Sileo interface with real repository data, on a phone that was never jailbroken.
 
-Sileo focuses on speed, features, and a modern feel. It is made with love by people from all over the world!
+## What works
 
-Our official Twitter is [@GetSileo](https://twitter.com/getsileo).
+- Featured page with live data from the remote Featured list
+- Real repository data: Havoc and Chariz are the default sources
+- Packages tab, categories, and search over real repo metadata
+- News tab with bundled articles
+- Tapping GET downloads a real `.deb` file to `Documents/Downloads`
+- Footer shows your real iOS version
 
-# Support
+## What does not work (honest limits)
 
-For support, ask in the [Sileo Discord server](https://discord.com/invite/Udn4kQg) or contact [@SileoSupport on Twitter](https://twitter.com/sileosupport).
+- Package installation is not available on stock iOS. Tapping GET downloads the `.deb`, it does not install it.
+- Canister is a stub — it never contacts the Canister service.
+- The installed-packages list is empty: nothing is actually installed by this demo.
 
-# Support the project 
+## Install
 
-If you would like to help support the development of Sileo, consider donating at the following links:
+Sideload the IPA with your own certificate (AltStore, SideStore, LiveContainer, or similar). Minimum iOS 12.0.
 
-* Amy (Sileo Developer): [Patreon](https://www.patreon.com/elihwyma), [Paypal](https://paypal.me/anamy1024)
-* Aarnav (Canister Developer/Maintainer): [Github Sponsors](https://github.com/sponsors/tale), [Patreon](https://www.patreon.com/aarnavtale), [Paypal](https://paypal.me/aatale)
+## Build
 
-# Contribute
+Built by GitHub Actions (`.github/workflows/ipa-demo.yml`) from the `demo` branch.
 
-For localization, [join our Crowdin project](https://crowdin.com/project/sileo) and submit your translations there.
+## Credits
 
-For software, make a Pull Request with your changes and our team will review it.
-
-1. Clone this repository
-    ```sh
-    git clone --recursive https://github.com/Sileo/Sileo
-    ```
-2. Set the `DEVELOPMENT_TEAM` Build Setting
-    
-    There are multiple ways to do this, for example:
-    
-    * Using Xcode Custom Paths
-        * Go to Xcode > Preferences > Locations > Custom Paths
-        * Add an entry with `Name` as `DEVELOPMENT_TEAM`, `Display Name` as `Development Team`, and `Path` as your Apple Developer Team ID
-    * Using Xcode Build Settings
-        * Set the `Development Team` Build Setting
-        * Remember to never commit this change
-        
-3. Apply our git hooks by running: `git config core.hooksPath .githooks`
-4. Open `Sileo.xcodeproj` and have at it!
-
-If you have questions, ask in the Sileo Discord server.
-
-#
-
-Sileo Team 2018 - 2023
+Based on [Sileo](https://github.com/Sileo/Sileo) by Amy While and contributors. Demo modifications by adnan.120hz.
